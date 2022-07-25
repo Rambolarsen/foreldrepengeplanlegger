@@ -1,0 +1,39 @@
+﻿@page "/planlegger"
+
+<PageTitle>Planlegger</PageTitle>
+
+
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h4" Align="Align.Center" GutterBottom="true">Planlegg foreldrepengene dine</MudText>
+    <MudText Align="Align.Center">
+        Her kan dere planlegge hvor mange uker dere kan ta ut foreldrepenger, og hvordan dere kan utsette perioder med foreldrepenger.
+    </MudText>
+    
+</MudContainer>
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h5" Align="Align.Center" GutterBottom="true">Velg deres situasjon</MudText>
+</MudContainer>
+<MudGrid Justify="Justify.Center">
+    <MudItem xs="6" onclick="@">
+        <MudCard Outlined="true">
+            <MudCardContent style="text-align:center">
+                <MudText>Mor og Far</MudText>
+                <MudIcon Size="Size.Large" Icon="@Icons.Filled.Girl" />
+                <MudIcon Size="Size.Large" Icon="@Icons.Filled.Boy" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem> 
+    <MudItem xs="6">
+        <MudCard Outlined="true">
+            <MudCardContent style="text-align:center">
+                <MudText>Bare mor har rett</MudText>
+                <MudIcon Size="Size.Large" Icon="@Icons.Filled.Girl" />
+                <MudIcon Size="Size.Large" Style="color: gray;" Icon="@Icons.Filled.Boy" />
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+@code {
+
+}
