@@ -14,7 +14,7 @@
     <MudText Typo="Typo.h5" Align="Align.Center" GutterBottom="true">Velg deres situasjon</MudText>
 </MudContainer>
 <MudGrid Justify="Justify.Center">
-    <MudItem xs="6" onclick="@">
+    <MudItem xs="6" @onclick="@((e) => OnSelectParent(e,"test"))">
         <MudCard Outlined="true">
             <MudCardContent style="text-align:center">
                 <MudText>Mor og Far</MudText>
@@ -23,7 +23,7 @@
             </MudCardContent>
         </MudCard>
     </MudItem> 
-    <MudItem xs="6">
+    <MudItem xs="6" hidden=@show>
         <MudCard Outlined="true">
             <MudCardContent style="text-align:center">
                 <MudText>Bare mor har rett</MudText>
@@ -35,5 +35,15 @@
 </MudGrid>
 
 @code {
+    public string? MomName { get; set; }
 
+    private bool show = false;
+
+    protected void OnSelectParent(MouseEventArgs mouseEventArgs, string type)
+    {
+        if(type == "test")
+        {
+            show = true;
+        }       
+    }
 }
